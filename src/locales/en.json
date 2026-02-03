@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "service": "Service",
+    "skills": "Skills",
+    "resume": "Resume",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "testimonial": "Testimonial",
+    "contact": "Contact"
+  },
+  "hero": {
+    "introduce": "INTRODUCE",
+    "availableForWork": "Available for work",
+    "fullTimeJob": "Full Time Job",
+    "hireMe": "HIRE ME",
+    "trustedCompanies": "Trusted companies"
+  },
+  "about": {
+    "title": "ABOUT ME",
+    "me": "Me",
+    "sectionTitle": "About"
+  },
+  "services": {
+    "title": "SERVICES",
+    "my": "My",
+    "services": "Services",
+    "description": "I design products that are more than pretty. I make them shippable and usable."
+  },
+  "skills": {
+    "title": "SKILLS",
+    "my": "My",
+    "advantages": "Advantages",
+    "description": "Technical skills and expertise I have mastered."
+  },
+  "resume": {
+    "title": "RESUME",
+    "work": "Work",
+    "experience": "Experience",
+    "my": "My",
+    "education": "Education",
+    "description": "My work and educational background"
+  },
+  "portfolio": {
+    "title": "PORTFOLIO",
+    "featured": "Featured",
+    "projects": "Projects",
+    "moreProjects": "More Projects",
+    "description": "Sample projects I have completed."
+  },
+  "blog": {
+    "title": "BLOG",
+    "latest": "Latest",
+    "insights": "Insights",
+    "morePost": "More Post",
+    "description": "Latest articles and writings",
+    "comments": "Comments",
+    "leaveComment": "Leave a Comment",
+    "addComment": "Add Comment",
+    "reply": "Reply",
+    "cancel": "Cancel",
+    "fullName": "Full Name",
+    "yourMessage": "Your Message"
+  },
+  "testimonial": {
+    "title": "TESTIMONIAL",
+    "what": "What",
+    "peopleSay": "People Say",
+    "description": "What colleagues and clients say about my work"
+  },
+  "contact": {
+    "title": "CONTACT",
+    "contact": "Contact",
+    "me": "Me.",
+    "description": "Get in touch for collaboration or questions.",
+    "location": "Location",
+    "email": "E-mail",
+    "phone": "Phone",
+    "name": "Name",
+    "emailAddress": "Email Address",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "sending": "Sending..."
+  },
+  "sidebar": {
+    "residence": "Residence",
+    "city": "City",
+    "age": "Age"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "viewSite": "View Site",
+    "download": "Download",
+    "downloadCV": "Download CV"
+  },
+  "footer": {
+    "copyright": "All rights reserved",
+    "madeWith": "Made with",
+    "by": "by"
+  }
+}

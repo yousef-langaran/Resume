@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "home": "خانه",
+    "about": "درباره من",
+    "service": "خدمات",
+    "skills": "مهارت‌ها",
+    "resume": "رزومه",
+    "portfolio": "نمونه‌کارها",
+    "blog": "مقالات",
+    "testimonial": "نظرات",
+    "contact": "تماس"
+  },
+  "hero": {
+    "introduce": "معرفی",
+    "availableForWork": "آماده همکاری",
+    "fullTimeJob": "کار تمام‌وقت",
+    "hireMe": "استخدام من",
+    "trustedCompanies": "شرکت‌های همکار"
+  },
+  "about": {
+    "title": "درباره",
+    "me": "من",
+    "sectionTitle": "درباره من"
+  },
+  "services": {
+    "title": "خدمات",
+    "my": "خدمات",
+    "services": "من",
+    "description": "خدماتی که ارائه می‌دهم شامل طراحی و توسعه وب، سئو و بهینه‌سازی سایت می‌باشد."
+  },
+  "skills": {
+    "title": "مهارت‌ها",
+    "my": "مزایای",
+    "advantages": "من",
+    "description": "مهارت‌های فنی و تخصصی که در آن‌ها تسلط دارم."
+  },
+  "resume": {
+    "title": "رزومه",
+    "work": "سابقه",
+    "experience": "کاری",
+    "my": "تحصیلات",
+    "education": "من",
+    "description": "سوابق کاری و تحصیلی من"
+  },
+  "portfolio": {
+    "title": "نمونه‌کارها",
+    "featured": "پروژه‌های",
+    "projects": "برجسته",
+    "moreProjects": "پروژه‌های بیشتر",
+    "description": "نمونه پروژه‌هایی که انجام داده‌ام."
+  },
+  "blog": {
+    "title": "مقالات",
+    "latest": "آخرین",
+    "insights": "مطالب",
+    "morePost": "مقالات بیشتر",
+    "description": "آخرین مقالات و نوشته‌های من",
+    "comments": "نظرات",
+    "leaveComment": "ارسال نظر",
+    "addComment": "ثبت نظر",
+    "reply": "پاسخ",
+    "cancel": "انصراف",
+    "fullName": "نام کامل",
+    "yourMessage": "پیام شما"
+  },
+  "testimonial": {
+    "title": "نظرات",
+    "what": "نظر",
+    "peopleSay": "دیگران",
+    "description": "نظرات همکاران و مشتریان درباره کار من"
+  },
+  "contact": {
+    "title": "تماس",
+    "contact": "تماس با",
+    "me": "من",
+    "description": "برای همکاری یا سوال با من در تماس باشید.",
+    "location": "آدرس",
+    "email": "ایمیل",
+    "phone": "تلفن",
+    "name": "نام",
+    "emailAddress": "آدرس ایمیل",
+    "message": "پیام",
+    "sendMessage": "ارسال پیام",
+    "sending": "در حال ارسال..."
+  },
+  "sidebar": {
+    "residence": "کشور",
+    "city": "شهر",
+    "age": "سن"
+  },
+  "common": {
+    "loading": "در حال بارگذاری...",
+    "error": "خطا",
+    "success": "موفق",
+    "viewSite": "مشاهده سایت",
+    "download": "دانلود",
+    "downloadCV": "دانلود رزومه"
+  },
+  "footer": {
+    "copyright": "تمامی حقوق محفوظ است",
+    "madeWith": "ساخته شده با",
+    "by": "توسط"
+  }
+}

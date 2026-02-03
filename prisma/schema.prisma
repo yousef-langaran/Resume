@@ -1,0 +1,234 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  password     String
+  name         String
+  slug         String   @unique
+  customDomain String?  @unique // دامنه شخصی (مثل resume.example.com) — فقط رزومه این کاربر روی این دامنه نمایش داده می‌شود
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  profiles     Profile[]
+  experiences  Experience[]
+  educations   Education[]
+  skills       Skill[]
+  services     Service[]
+  projects     Project[]
+  blogs        Blog[]
+  testimonials  Testimonial[]
+  projectStats  ProjectStat[]
+  contactInfos  ContactInfo[]
+}
+
+model Profile {
+  id                String   @id @default(cuid())
+  userId            String?
+  user              User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fullName          String
+  fullNameFa        String?  // Persian name
+  jobTitle          String
+  jobTitleFa        String?  // Persian job title
+  introHeading1     String
+  introHeading1Fa   String?  // Persian
+  introHeading2     String
+  introHeading2Fa   String?  // Persian
+  introDescription  String
+  introDescriptionFa String? // Persian description
+  userImage         String?
+  userImageLight    String?
+  designations      String   // JSON array (English)
+  designationsFa    String?  // JSON array (Persian)
+  residence         String?
+  residenceFa       String?
+  city              String?
+  cityFa            String?
+  age               String?
+  phone             String?
+  email             String?
+  github            String?
+  linkedin          String?
+  location          String?
+  locationFa        String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model Experience {
+  id          String   @id @default(cuid())
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  platform    String
+  platformFa  String?
+  duration    String
+  durationFa  String?
+  position    String
+  positionFa  String?
+  description String
+  descriptionFa String?
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Education {
+  id          String   @id @default(cuid())
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  institution String
+  institutionFa String?
+  duration    String
+  durationFa  String?
+  degree      String
+  degreeFa    String?
+  description String
+  descriptionFa String?
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Skill {
+  id      String   @id @default(cuid())
+  userId  String?
+  user    User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name    String
+  value   Int
+  image   String?
+  order   Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  number      String
+  title       String
+  titleFa     String?
+  description String
+  descriptionFa String?
+  icon        String?
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Project {
+  id              String   @id @default(cuid())
+  userId          String?
+  user            User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title           String
+  titleFa         String?
+  slug            String   @unique
+  type            String
+  typeFa          String?
+  thumbnail       String?
+  image           String?
+  client          String?
+  clientFa        String?
+  services        String?
+  servicesFa      String?
+  duration        String?
+  durationFa      String?
+  description     String
+  descriptionFa   String?
+  descriptionLists String?  // JSON array
+  descriptionListsFa String? // JSON array (Persian)
+  projectImages   String?   // JSON array of image paths
+  order           Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Blog {
+  id            String   @id @default(cuid())
+  userId        String?
+  user          User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title         String
+  titleFa       String?
+  slug          String   @unique
+  category      String
+  categoryFa    String?
+  date          String
+  dateFa        String?
+  thumbnail     String?
+  image         String?
+  postedBy      String?
+  postedByFa    String?
+  description   String?
+  descriptionFa String?
+  descriptionLists String?  // JSON array
+  descriptionListsFa String? // JSON array (Persian)
+  blogImages    String?   // JSON array
+  order         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Testimonial {
+  id       String   @id @default(cuid())
+  userId   String?
+  user     User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name     String
+  nameFa   String?
+  position String
+  positionFa String?
+  image    String?
+  text     String
+  textFa   String?
+  order    Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ProjectStat {
+  id      String   @id @default(cuid())
+  userId  String?
+  user    User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title   String
+  titleFa String?
+  count   Int
+  postFix Boolean  @default(true)
+  order   Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ContactInfo {
+  id     String   @id @default(cuid())
+  userId String?
+  user   User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  field  String
+  fieldFa String?
+  data  String
+  dataFa String?
+  icon  String?
+  order Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteSetting {
+  id       String   @id @default(cuid())
+  key      String   @unique
+  value    String   // JSON
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
