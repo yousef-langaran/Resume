@@ -53,7 +53,7 @@ export default function DomainPage() {
         دامنه شخصی
       </h1>
       <p className="text-gray-600 dark:text-gray-400 text-sm mb-6">
-        با وصل کردن یک دامنه (مثلاً resume.example.com) فقط رزومه شما روی آن آدرس نمایش داده می‌شود.
+        هر کاربر می‌تواند دامنهٔ خودش را به رزومهٔ خودش وصل کند. با وارد کردن یک دامنه (مثلاً resume.example.com) فقط رزومهٔ شما روی آن آدرس دیده می‌شود و هر کاربر دیگر دامنهٔ جداگانهٔ خودش را دارد.
       </p>
 
       <div className="p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 mb-6">
